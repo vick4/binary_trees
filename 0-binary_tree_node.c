@@ -1,9 +1,3 @@
-if (new_node == NULL)
-	{
-		return (NULL);
-	}
-
-
 #include <stdlib.h>
 #include "binary_trees.h"
 
