@@ -13,6 +13,9 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
 	/* declare variable to store leaves */
 	size_t leaves = 0;
 
+	if (tree == NULL)
+		return (0);
+
 	/* base case */
 	if (tree->left == NULL && tree->right == NULL)
 		return (1);
