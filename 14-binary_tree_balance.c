@@ -28,10 +28,12 @@ int binary_tree_balance(const binary_tree_t *tree)
 }
 
 /**
- * binary_tree_height - measure height of tree
- * @tree: tree to measure
+ * find_tree_height_by_nodes - finds the height of a binary tree by counting
+ * the number of nodes
  *
- * Return: height
+ * @tree: pointer to the root node of the tree to measure the height
+ *
+ * Return: height of the tree, or 0 if tree is NULL
  */
 size_t find_tree_height_by_nodes(binary_tree_t *tree)
 {
@@ -49,6 +51,6 @@ size_t find_tree_height_by_nodes(binary_tree_t *tree)
 	right_height = find_tree_height_by_nodes(tree->right);
 
 	return (left_height > right_height
-		    ? left_height + padding
-		    : right_height + padding);
+		? left_height + padding
+		: right_height + padding);
 }
