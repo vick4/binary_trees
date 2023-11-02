@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "binary_trees.h"
 
 size_t recurse_for_height(const binary_tree_t *tree);
