@@ -53,6 +53,6 @@ size_t find_tree_height_by_nodes(binary_tree_t *tree)
 	right_height = find_tree_height_by_nodes(tree->right);
 
 	return (left_height > right_height
-		    ? left_height + padding_height
-		    : right_height + padding_height);
+		? left_height + padding_height
+		: right_height + padding_height);
 }
