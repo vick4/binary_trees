@@ -39,18 +39,20 @@ size_t find_tree_height_by_nodes(binary_tree_t *tree)
 {
 	size_t left_height = 0;
 	size_t right_height = 0;
-	size_t padding = 0;
+	size_t padding_height = 0;
 
 	if (tree == NULL)
+	{
 		return (0);
+	}
 
 	/* counting height by no of nodes not edges */
-	padding = 1;
+	padding_height = 1;
 
 	left_height = find_tree_height_by_nodes(tree->left);
 	right_height = find_tree_height_by_nodes(tree->right);
 
 	return (left_height > right_height
-		    ? left_height + padding
-		    : right_height + padding);
+		    ? left_height + padding_height
+		    : right_height + padding_height);
 }
