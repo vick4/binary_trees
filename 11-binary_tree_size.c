@@ -17,10 +17,10 @@ size_t binary_tree_size(const binary_tree_t *tree)
 
 	size_node_count = 1;
 
-	size_l_node_count = binary_tree_size(tree->left);
-	size_r_node_count = binary_tree_size(tree->right);
+	size_l_node_count = tree->left ? binary_tree_size(tree->left) : 0;
+	size_r_node_count = tree->right ? binary_tree_size(tree->right) : 0;
 
 
 	/* return the size of the tree */
-	return (size_l + size_r + size_node_count);
+	return (size_l_node_count + size_r_node_count + size_node_count);
 }
