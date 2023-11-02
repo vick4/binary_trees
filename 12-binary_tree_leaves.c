@@ -11,7 +11,7 @@
 size_t binary_tree_leaves(const binary_tree_t *tree)
 {
 	 /* declare variable to store leaves */
-	size_t left_leaves, right_leaves;
+	size_t leaves;
 
 	if (tree == NULL)
 		return (0);
@@ -20,8 +20,8 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
 	if (tree->left == NULL && tree->right == NULL)
 		return (1);
 
-	left_leaves += binary_tree_leaves(tree->left);
-	right_leaves += binary_tree_leaves(tree->right);
+	leaves = binary_tree_leaves(tree->left);
+	leaves = binary_tree_leaves(tree->right);
 
-	return (left_leaves + right_leaves);
+	return (leaves);
 }
